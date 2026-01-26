@@ -5,9 +5,10 @@ import { Play, X, ExternalLink } from "lucide-react";
 const courses = [
   {
     title: "Signals & Systems",
-    source: "NPTEL",
+    source: "GATE Wallah",
     description: "Master the fundamentals of signal processing",
-    playlistId: "PLbMVogVj5nJQqNPz0E5YO2lyH7uZOvnqT",
+    playlistId: "PLR7krO3VHssSsUoMzIyYrUre_dM4M9LfI",
+    videoId: "CnlqbKUzJK4",
     color: "from-blue-500 to-cyan-500"
   },
   {
@@ -15,6 +16,7 @@ const courses = [
     source: "Neso Academy",
     description: "Deep dive into analog circuit design",
     playlistId: "PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS",
+    videoId: "7jaa1rlTvAE",
     color: "from-purple-500 to-pink-500"
   },
   {
@@ -22,28 +24,56 @@ const courses = [
     source: "Neso Academy",
     description: "Logic gates to digital systems",
     playlistId: "PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm",
+    videoId: "M0mx8S05v60",
     color: "from-green-500 to-emerald-500"
   },
   {
     title: "Communication Systems",
-    source: "NPTEL",
+    source: "Neso Academy",
     description: "Principles of modern communication",
-    playlistId: "PLbRMhDVUMngc-dJhyOh-vY13WRX8R9DSC",
+    playlistId: "PLBlnK6fEyqRgJxb_HZLYfP_To_s8ck1qY",
+    videoId: "rKzDbdGhcdY",
     color: "from-orange-500 to-red-500"
   },
   {
     title: "VLSI Design",
-    source: "NPTEL",
+    source: "NPTEL IIT",
     description: "Chip design fundamentals",
-    playlistId: "PLJ5C_6qdAvBFux0X9t04FcKfl0zrW8X2j",
+    playlistId: "PLyqSpQzTE6M8iOrfy70ELk9W72JG5a98V",
+    videoId: "vKtoQEAoGck",
     color: "from-indigo-500 to-violet-500"
   },
   {
-    title: "Embedded Systems",
+    title: "Microprocessors",
     source: "Neso Academy",
-    description: "Program microcontrollers & hardware",
-    playlistId: "PLBlnK6fEyqRjT3oJxFXRgjPNzeS-ip0HJ",
+    description: "8085/8086 architecture and programming",
+    playlistId: "PLBlnK6fEyqRgyFCCgqdcBowGSV_fcStXJ",
+    videoId: "jte2S2iWRMI",
     color: "from-teal-500 to-cyan-500"
+  },
+  {
+    title: "Control Systems",
+    source: "Neso Academy",
+    description: "Feedback systems and stability analysis",
+    playlistId: "PLBlnK6fEyqRhqzJT87LsdQKYZBC93ezDo",
+    videoId: "HcLYoCmWOjI",
+    color: "from-rose-500 to-pink-500"
+  },
+  {
+    title: "Network Theory",
+    source: "Neso Academy",
+    description: "Circuit analysis and network theorems",
+    playlistId: "PLBlnK6fEyqRgLR-hMp7wem-bdVN1iEhYD",
+    videoId: "NEhH6C7Fzw4",
+    color: "from-amber-500 to-orange-500"
+  },
+  {
+    title: "Computer Networks",
+    source: "Neso Academy",
+    description: "Networking fundamentals and protocols",
+    playlistId: "PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx",
+    videoId: "ly8ikWtAY7s",
+    color: "from-sky-500 to-blue-500"
   }
 ];
 
@@ -110,7 +140,7 @@ const CoursesSection = () => {
 
         {/* YouTube Embed Modal */}
         <AnimatePresence>
-          {activePlaylist && (
+          {activePlaylist && activeCourse && (
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/50 backdrop-blur-sm"
               initial={{ opacity: 0 }}
@@ -128,10 +158,10 @@ const CoursesSection = () => {
                 <div className="flex items-center justify-between p-4 border-b border-border">
                   <div>
                     <h3 className="font-display font-bold text-lg">
-                      {activeCourse?.title}
+                      {activeCourse.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {activeCourse?.source}
+                      {activeCourse.source}
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
@@ -153,8 +183,8 @@ const CoursesSection = () => {
                 </div>
                 <div className="aspect-video">
                   <iframe
-                    src={`https://www.youtube.com/embed/videoseries?list=${activePlaylist}`}
-                    title={activeCourse?.title}
+                    src={`https://www.youtube.com/embed/${activeCourse.videoId}?list=${activePlaylist}&rel=0`}
+                    title={activeCourse.title}
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
