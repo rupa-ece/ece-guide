@@ -45,10 +45,10 @@ const courses = [
   },
   {
     title: "Microprocessors",
-    source: "Neso Academy",
+    source: "NPTEL IIT",
     description: "8085/8086 architecture and programming",
-    playlistId: "PLBlnK6fEyqRgyFCCgqdcBowGSV_fcStXJ",
-    videoId: "jte2S2iWRMI",
+    playlistId: "PLbMVogVj5nJQe0Y_RA6K690yCGfMQmfHr",
+    videoId: "7SfoMz5nubI",
     color: "from-teal-500 to-cyan-500"
   },
   {
@@ -61,18 +61,18 @@ const courses = [
   },
   {
     title: "Network Theory",
-    source: "Neso Academy",
+    source: "GATE Wallah",
     description: "Circuit analysis and network theorems",
-    playlistId: "PLBlnK6fEyqRgLR-hMp7wem-bdVN1iEhYD",
-    videoId: "NEhH6C7Fzw4",
+    playlistId: "PLgF7lRh8Xb_X6vMQiT9hy4OGGRASX0hXc",
+    videoId: "NJ-5j2awUu4",
     color: "from-amber-500 to-orange-500"
   },
   {
     title: "Computer Networks",
-    source: "Neso Academy",
+    source: "NPTEL IIT",
     description: "Networking fundamentals and protocols",
-    playlistId: "PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx",
-    videoId: "ly8ikWtAY7s",
+    playlistId: "PLbRMhDVUMngf-peFloB6kyiA40EptH1up",
+    videoId: "9FO7QTNIInc",
     color: "from-sky-500 to-blue-500"
   }
 ];
