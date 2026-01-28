@@ -56,18 +56,21 @@ const topics: TopicDetails[] = [
   },
 ];
 
-// Electronics symbol components
-const DiodeSymbol = () => (
-  <svg viewBox="0 0 60 30" className="w-12 h-6 text-primary/40">
+// Electronics symbol components - using forwardRef for framer-motion compatibility
+import React from "react";
+
+const DiodeSymbol = React.forwardRef<SVGSVGElement>((_, ref) => (
+  <svg ref={ref} viewBox="0 0 60 30" className="w-12 h-6 text-primary/40">
     <line x1="5" y1="15" x2="20" y2="15" stroke="currentColor" strokeWidth="2"/>
     <polygon points="20,5 20,25 40,15" fill="none" stroke="currentColor" strokeWidth="2"/>
     <line x1="40" y1="5" x2="40" y2="25" stroke="currentColor" strokeWidth="2"/>
     <line x1="40" y1="15" x2="55" y2="15" stroke="currentColor" strokeWidth="2"/>
   </svg>
-);
+));
+DiodeSymbol.displayName = "DiodeSymbol";
 
-const TransistorSymbol = () => (
-  <svg viewBox="0 0 50 50" className="w-10 h-10 text-primary/40">
+const TransistorSymbol = React.forwardRef<SVGSVGElement>((_, ref) => (
+  <svg ref={ref} viewBox="0 0 50 50" className="w-10 h-10 text-primary/40">
     <line x1="10" y1="25" x2="20" y2="25" stroke="currentColor" strokeWidth="2"/>
     <line x1="20" y1="10" x2="20" y2="40" stroke="currentColor" strokeWidth="2"/>
     <line x1="20" y1="15" x2="35" y2="5" stroke="currentColor" strokeWidth="2"/>
@@ -76,24 +79,27 @@ const TransistorSymbol = () => (
     <line x1="35" y1="5" x2="35" y2="0" stroke="currentColor" strokeWidth="2"/>
     <line x1="35" y1="45" x2="35" y2="50" stroke="currentColor" strokeWidth="2"/>
   </svg>
-);
+));
+TransistorSymbol.displayName = "TransistorSymbol";
 
-const CapacitorSymbol = () => (
-  <svg viewBox="0 0 50 30" className="w-10 h-6 text-primary/40">
+const CapacitorSymbol = React.forwardRef<SVGSVGElement>((_, ref) => (
+  <svg ref={ref} viewBox="0 0 50 30" className="w-10 h-6 text-primary/40">
     <line x1="5" y1="15" x2="20" y2="15" stroke="currentColor" strokeWidth="2"/>
     <line x1="20" y1="5" x2="20" y2="25" stroke="currentColor" strokeWidth="2"/>
     <line x1="30" y1="5" x2="30" y2="25" stroke="currentColor" strokeWidth="2"/>
     <line x1="30" y1="15" x2="45" y2="15" stroke="currentColor" strokeWidth="2"/>
   </svg>
-);
+));
+CapacitorSymbol.displayName = "CapacitorSymbol";
 
-const ResistorSymbol = () => (
-  <svg viewBox="0 0 60 20" className="w-12 h-5 text-primary/40">
+const ResistorSymbol = React.forwardRef<SVGSVGElement>((_, ref) => (
+  <svg ref={ref} viewBox="0 0 60 20" className="w-12 h-5 text-primary/40">
     <line x1="0" y1="10" x2="10" y2="10" stroke="currentColor" strokeWidth="2"/>
     <polyline points="10,10 15,2 20,18 25,2 30,18 35,2 40,18 45,10" fill="none" stroke="currentColor" strokeWidth="2"/>
     <line x1="45" y1="10" x2="60" y2="10" stroke="currentColor" strokeWidth="2"/>
   </svg>
-);
+));
+ResistorSymbol.displayName = "ResistorSymbol";
 
 const WhatIsECE = () => {
   const ref = useRef(null);
