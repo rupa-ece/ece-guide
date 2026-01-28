@@ -29,10 +29,10 @@ const courses = [
   },
   {
     title: "Communication Systems",
-    source: "Neso Academy",
+    source: "Communication Fundamentals",
     description: "Principles of modern communication",
-    playlistId: "PLBlnK6fEyqRgJxb_HZLYfP_To_s8ck1qY",
-    videoId: "rKzDbdGhcdY",
+    playlistId: "PLx7-Q20A1VYKTk9LLRNdViuWeYUe1o207",
+    videoId: "WosVbHMkeqY",
     color: "from-orange-500 to-red-500"
   },
   {
