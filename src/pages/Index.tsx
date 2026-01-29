@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import WhatIsECE from "@/components/WhatIsECE";
 import WhyChooseECE from "@/components/WhyChooseECE";
@@ -16,16 +17,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <CustomCursor />
+      <Navbar />
       <HeroSection />
-      <WhatIsECE />
-      <WhyChooseECE />
+      <div id="what-is-ece"><WhatIsECE /></div>
+      <div id="why-ece"><WhyChooseECE /></div>
       <SkillsSection />
-      <CareerSection />
-      <EarningSection />
-      <CoursesSection />
-      <ToolsSection />
-      <ProjectIdeasSection />
-      <FAQSection />
+      <div id="careers"><CareerSection /></div>
+      <div id="earnings"><EarningSection /></div>
+      <div id="courses"><CoursesSection /></div>
+      <div id="tools"><ToolsSection /></div>
+      <div id="projects"><ProjectIdeasSection /></div>
+      <div id="faq"><FAQSection /></div>
       <MotivationSection />
       <Footer />
     </div>
