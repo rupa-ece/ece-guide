@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Cpu, Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+import { Heart, Cpu, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -48,24 +48,6 @@ const Footer = () => {
               Your comprehensive guide to Electronics and Communication Engineering. 
               Empowering future engineers with knowledge and inspiration.
             </p>
-            <div className="flex gap-3">
-              {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Mail, href: "#" },
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
