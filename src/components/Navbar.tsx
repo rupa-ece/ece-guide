@@ -26,10 +26,9 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "What is ECE", href: "#what-is-ece", icon: Cpu },
   { label: "Why ECE", href: "#why-ece", icon: GraduationCap },
-  { label: "Roadmap", href: "#roadmap", icon: BookOpen },
   { label: "Careers", href: "#careers", icon: Briefcase },
-  { label: "Placement Tips", href: "#placement-tips", icon: TrendingUp },
-  { label: "Colleges", href: "#colleges", icon: GraduationCap },
+  { label: "Earnings", href: "#earnings", icon: TrendingUp },
+  { label: "Courses", href: "#courses", icon: BookOpen },
   { label: "Tools", href: "#tools", icon: Wrench },
   { label: "Projects", href: "#projects", icon: Lightbulb },
   { label: "FAQ", href: "#faq", icon: HelpCircle },
