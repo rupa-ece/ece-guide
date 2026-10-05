@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import {
-  Code2, Microchip, Cpu, X, CheckCircle2, ArrowRight, Map, Zap,
+  Code2, Microchip, Cpu, X, CheckCircle2, ArrowRight, Map, Zap, Briefcase, GraduationCap,
 } from "lucide-react";
 
 interface Pathway {
