@@ -383,6 +383,4 @@ const DomainPathwaysSection = () => {
   );
 };
 
-import { Briefcase, GraduationCap } from "lucide-react";
-
 export default DomainPathwaysSection;
